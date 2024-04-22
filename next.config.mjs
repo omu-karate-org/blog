@@ -3,6 +3,7 @@ const nextConfig = {
     experimental: {
         appDir: true,
       },
+    basePath: '/blog',
     output: "export",
     images: { unoptimized: true },
 };
