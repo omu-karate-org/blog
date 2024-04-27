@@ -9,7 +9,7 @@ const ArticleList = ({ articles }: ArticleListProps) => {
   return (
     <div>
       {articles.map((article: any) => (
-        <ArticleCard key={article.id} article={article} />
+        <ArticleCard key={article.date} article={article} />
       ))}
     </div>
   );
