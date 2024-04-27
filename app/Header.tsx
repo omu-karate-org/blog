@@ -14,7 +14,7 @@ export default function Header() {
             href="https://mtaketani113.github.io/omu-karate-page/"
             className="bg-orange-300 px-3 py-3 rounded-md"
           >
-            応援ページへ
+            応援ページ
           </a>
         </nav>
       </div>

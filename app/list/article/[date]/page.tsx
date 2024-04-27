@@ -20,7 +20,7 @@ const page = async ({ params }: { params: paramsType }) => {
     return (
         <div className="max-w-3xl mx-auto p-5">
           <h1 className="text-4xl text-center mb-10 mt-10">
-            {params.date}　{jsonData[params.date].title}
+            {params.date}<br/>{jsonData[params.date].title}
           </h1>
           <div className="text-lg leading-relaxed text-justify">
             <p className="whitespace-pre-wrap">{jsonData[params.date].description}</p>
