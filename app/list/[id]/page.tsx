@@ -67,6 +67,9 @@ const page = async ({ params }: { params: paramsType }) => {
         <div className="bg-white shadow-md rounded p-4 mb-6 mt-4">
           <h3 className="font-bold text-gray-900 mb-2">About Me</h3>
           <p className="text-gray-600">作成中</p>
+          <Link href="/archive/1" className="pb-6 text-slate-900">
+            アーカイブへ
+          </Link>
         </div>
         {/* <div className="bg-white shadow-md rounded p-4 mb-6 mt-4 w-full">
           <h3 className="font-bold text-gray-900 mb-2">Category</h3>
