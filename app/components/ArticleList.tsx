@@ -1,5 +1,5 @@
-import React from "react";
-import ArticleCard from "./ArticleCard";
+import React from 'react';
+import ArticleCard from './ArticleCard';
 
 type ArticleListProps = {
   articles: any[];

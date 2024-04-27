@@ -1,14 +1,11 @@
 {
-  "2023-11-03":{
+  "2023-11-03": {
     "title": "三商戦に向けて練習",
     "description": "12月9日に一橋大学で開催される三商戦に向けて練習しました。\n型交換では平安二段とバッサイ大を、組手は刻み突きや中段突きなどの基本の攻撃から連続技まで練習しました。",
     "videos": [
-      {"src": "xSqH2CDp_UI",
-      "description": "三商戦の試合に向けて中段突きを練習"},
-      {"src": "jlZqPuWcPCQ",
-      "description": "型交換の平安二段練習"},
-      {"src": "DVP7cUs3NMY",
-      "description": "型交換のバッサイ大を練習"}
+      { "src": "xSqH2CDp_UI", "description": "三商戦の試合に向けて中段突きを練習" },
+      { "src": "jlZqPuWcPCQ", "description": "型交換の平安二段練習" },
+      { "src": "DVP7cUs3NMY", "description": "型交換のバッサイ大を練習" }
     ]
   }
 }

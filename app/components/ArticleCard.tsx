@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import nextConfig from "../../next.config.mjs"
+import React from 'react';
+import Link from 'next/link';
+import nextConfig from '../../next.config.mjs';
 
 type ArticleCardProps = {
   article: any;
@@ -9,17 +9,12 @@ type ArticleCardProps = {
 const ArticleCard = ({ article }: ArticleCardProps) => {
   const basePath = nextConfig.basePath;
 
-  const imageSrc = article.images.length > 0 ? article.images[0] : basePath + "/no_image_logo.png";
+  const imageSrc = article.images.length > 0 ? article.images[0] : basePath + '/no_image_logo.png';
   return (
     <div>
       <article className="flex flex-col shadow my-4">
         <Link href={`${article.path}/${article.date}`} className="hover:opacity-75">
-          <img
-            src={imageSrc}
-            width={1280}
-            height={300}
-            alt=""
-          />
+          <img src={imageSrc} width={1280} height={300} alt="" />
         </Link>
         <div className="bg-white flex flex-col justify-start p-6">
           <Link
@@ -29,12 +24,10 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
             {/* Next.js13. no-storeとno-cacheの違い */}
             {article.title ?? article.description}
           </Link>
-          <p className="text-sm pb-3 text-slate-900">
-            {article.date}
-          </p>
+          <p className="text-sm pb-3 text-slate-900">{article.date}</p>
           <Link href={`${article.path}/${article.date}`} className="pb-6 text-slate-900">
             {article.description.length > 70
-              ? article.description.substring(0, 70) + "..."
+              ? article.description.substring(0, 70) + '...'
               : article.description}
           </Link>
           <Link
