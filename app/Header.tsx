@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="py-5 px-10 border-b flex justify-between items-center">
       <div>
-        <h1 className="text-2xl font-extrabold">
+        <h1 className="text-xl font-extrabold">
           <Link href="/">大阪公立大学空手道部</Link>
         </h1>
       </div>
