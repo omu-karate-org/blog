@@ -1,6 +1,7 @@
 import fsPromises from 'fs/promises';
 import ArticleList from '../../components/ArticleList';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 type paramsType = {
   id: string;
@@ -15,6 +16,13 @@ export async function generateStaticParams(): Promise<paramsType[]> {
     idArray.push({ id: `${i}` });
   }
   return idArray;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "アーカイブ記事一覧 | 大阪公立大学空手道部",
+    description: "アーカイブ記事一覧",
+  }
 }
 
 const page = async ({ params }: { params: paramsType }) => {

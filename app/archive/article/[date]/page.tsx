@@ -1,8 +1,13 @@
 import fsPromises from 'fs/promises';
+import { Metadata } from 'next';
 
 type paramsType = {
   date: string;
 };
+
+type Props = {
+  params: { date: string }
+}
 
 export async function generateStaticParams(): Promise<paramsType[]> {
   const data: any = await fsPromises.readFile('./app/data/archive.json');
@@ -12,6 +17,14 @@ export async function generateStaticParams(): Promise<paramsType[]> {
     dateArray.push({ date: key });
   });
   return dateArray;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const date = params.date;
+  return {
+    title: date + " アーカイブ記事 | 大阪公立大学空手道部",
+    description: date + " アーカイブ記事",
+  }
 }
 
 const page = async ({ params }: { params: paramsType }) => {

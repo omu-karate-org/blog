@@ -1,7 +1,8 @@
 import fsPromises from 'fs/promises';
 import ArticleList from '../../components/ArticleList';
 import Link from 'next/link';
-// import { getAllArticles } from "@/pages/api/blogAPI";
+import Head from 'next/head';
+import { Metadata } from 'next';
 
 type paramsType = {
   id: string;
@@ -18,9 +19,14 @@ export async function generateStaticParams(): Promise<paramsType[]> {
   return idArray;
 }
 
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "記事一覧 | 大阪公立大学空手道部",
+    description: "記事一覧",
+  }
+}
+
 const page = async ({ params }: { params: paramsType }) => {
-  // const articles = await getAllArticles();
-  // console.log(articles);
   const data: any = await fsPromises.readFile('./app/data/blog.json');
   const jsonData = JSON.parse(data);
   const keys = Object.keys(jsonData);
