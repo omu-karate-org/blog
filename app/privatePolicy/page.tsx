@@ -1,10 +1,10 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "プライベートポリシー | 大阪公立大学空手道部",
-    description: "プライベートポリシー",
-  }
+    title: 'プライベートポリシー | 大阪公立大学空手道部',
+    description: 'プライベートポリシー',
+  };
 }
 const page = () => {
   return (

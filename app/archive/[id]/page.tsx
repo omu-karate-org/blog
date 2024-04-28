@@ -20,9 +20,9 @@ export async function generateStaticParams(): Promise<paramsType[]> {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "アーカイブ記事一覧 | 大阪公立大学空手道部",
-    description: "アーカイブ記事一覧",
-  }
+    title: 'アーカイブ記事一覧 | 大阪公立大学空手道部',
+    description: 'アーカイブ記事一覧',
+  };
 }
 
 const page = async ({ params }: { params: paramsType }) => {

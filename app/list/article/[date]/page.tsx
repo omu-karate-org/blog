@@ -6,8 +6,8 @@ type paramsType = {
 };
 
 type Props = {
-  params: { date: string }
-}
+  params: { date: string };
+};
 
 export async function generateStaticParams(): Promise<paramsType[]> {
   const data: any = await fsPromises.readFile('./app/data/blog.json');
@@ -22,9 +22,9 @@ export async function generateStaticParams(): Promise<paramsType[]> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const date = params.date;
   return {
-    title: date + " 記事 | 大阪公立大学空手道部",
-    description: date + "記事",
-  }
+    title: date + ' 記事 | 大阪公立大学空手道部',
+    description: date + '記事',
+  };
 }
 
 const page = async ({ params }: { params: paramsType }) => {
