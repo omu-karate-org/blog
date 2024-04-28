@@ -32,7 +32,7 @@ const page = async ({ params }: { params: paramsType }) => {
   const keys = Object.keys(jsonData);
   const id = Number(params.id);
   const start = (id - 1) * 10;
-  const end = Math.min(id * 10 - 1, keys.length);
+  const end = Math.min(id * 10, keys.length);
   const len: number = Math.ceil(keys.length / 10);
   const paging: Array<any> = [];
   for (let i = 1; i <= len; i++) {
