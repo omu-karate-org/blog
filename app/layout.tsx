@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '大阪公立大学空手道部 監督ブログ',
-  description: '大阪公立大学空手道部の監督が記載するブルグ',
+  description: '大阪公立大学空手道部の監督が記載するブログ',
 };
 
 export default function RootLayout({
